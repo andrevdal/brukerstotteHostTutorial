@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+hr {
+  border: 1px dotted black;
+  border-style: none none dotted;
+  color: #fff;
+  background-color: #fff;
+  border-width: thick;
+  margin-bottom: 3%;
+}
+a {
+  color: black;
+}
+
+/*NAVBAR*/
+
+nav {
+  padding: 1.5%;
+}
+nav h1,
+h2 {
+  display: inline;
+  padding: 3%;
+}
+nav h1 {
+  font-size: 200%;
+}
+nav a {
+  padding: 0.5%;
+}
+nav a:hover {
+  background: black;
+  color: white;
+}
+
+/*MAIN PÅ HJEM*/
+
+main h1 {
+  background-color: black;
+  color: white;
+  padding: 1%;
+  width: 30%;
+  margin: auto;
+  text-align: center;
+}
+
+/*FOOTER*/
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  height: 3%;
+}
+footer h1 {
+  font-size: 130%;
+}
+footer h2 {
+  font-size: 90%;
+}
