@@ -72,10 +72,6 @@ main h1 {
   background-color: black;
   color: white;
 }
-.gridContainer{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
 
 /*FOOTER*/
 
