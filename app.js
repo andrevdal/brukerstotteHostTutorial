@@ -1,4 +1,5 @@
 const dotenv = require("dotenv").config()
+
 const express = require("express");
 const app = express();
 
@@ -20,6 +21,6 @@ app.get("/sammenligning", (req, res) => {
   res.sendFile(__dirname + "/pages/sammenligning.html");
 });
 
-app.listen(process.env.PORT||3000, () => {
+app.listen(process.env.PORT ||3000, () => {
   console.log("Server running on port 3000");
 });
