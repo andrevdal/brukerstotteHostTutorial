@@ -31,11 +31,14 @@ nav a:hover {
 main{
   flex: 1 0 auto;
 }
-img{
+iframe{
+  height: 400px;
+}
+img, iframe{
   display: block;
   margin: auto;
   margin-bottom: 1%;
-  width: 40%;
+  width: 90%;
   border: groove black 1px;
   box-shadow: 3px 3px grey;
 }
@@ -78,8 +81,7 @@ main h1 {
 footer {
   width: 100%;
   text-align: center;
-  height: 200px;
-  margin-top: 10%;
+  height: 150px;
 }
 footer h1 {
   font-size: 130%;
