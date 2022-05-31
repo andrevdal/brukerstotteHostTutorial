@@ -4,6 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mobile.css">
     <title>Hjem</title>
 </head>
 <body>
@@ -13,10 +14,35 @@
         <h2><a href="/github">github</a></h2>
         <h2><a href="/sammenligning">Sammenligning</a></h2>
     </nav>
-    <hr></hr>
+    
     <main>
+        <hr></hr>
         <h1>Hvordan hoste en nettside med heroku?</h1>
+        <div class="mainText">
+            <h2>Lag bruker på heroku</h2>
+            <p>
+                Det første du må gjøre når du skal laste nettsiden din til heroku er å oprette en heroku-konto. Dette gjør du ved å besøke heroku hjemmesiden. Hvor du kan oprette en bruker eller logge inn. Dette finner du øverst i høyre hjørne.
+            </p>
+            <img src="herokuLogin.png" alt="Skjermbilde av hjemmesiden til heroku med pil som peker mot login og signup knappene">
+        </div>
+        <div class="mainText">
+            <h2>Lag en app og installer heroku CLI.</h2>
+            <p>
+                Etter du har laget en bruker og har logget inn kan du lage en “app”. Trykk på “create new app, og gi appen et navn. Navnet på appen vil være en del av domenet, så det må være unikt. Navnet må være minst 3 bokstaver, og bare bestå av bokstaver tall og bindestreker, med æ, ø og å som unntak. Velg deretter kontinent og trykk på "create app"
+            </p>
+            <p>
+                Nå som appen er laget må du laste ned heroku CLI. Dette må du gjøre for å kunne styre heroku appen fra terminalen. Trykk på den blå lenken under "Install the Heroku CLI". Lenken tar deg til nedlastingssiden. Om du er på windows bare på “64-bit installer”, dersom du er på macOS skriv følgende i terminalen “$ brew tap heroku/brew && brew install heroku”. Fullfør instalasjonen.
+            </p>
+            <iframe src="lageAppOgInstallereHeroku.mp4" frameborder="0"></iframe>
+            <p>
+                Skjermopptak av prosessen på windows
+            </p>
+        </div>
+        <div class="mainText">
+            <h2>Tilpasse koden din heroku</h2>
+        </div>
     </main>
+
     <footer>
         <hr>
         <h1>Made by Andreas Drevdal</h1>

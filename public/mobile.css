@@ -1,0 +1,19 @@
+@media (max-width: 770px) {
+  nav {
+    padding: 0;
+    text-align: center;
+  }
+  nav h1,
+  h2 {
+    display: block;
+    padding: 0;
+  }
+  .mainText,
+  main h1 {
+    margin-bottom: 5%;
+    width: 95%;
+  }
+  iframe {
+    height: auto;
+  }
+}
