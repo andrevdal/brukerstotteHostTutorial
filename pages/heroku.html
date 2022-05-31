@@ -21,17 +21,17 @@
         <div class="mainText">
             <h2>Lag bruker på heroku</h2>
             <p>
-                Det første du må gjøre når du skal laste nettsiden din til heroku er å oprette en heroku-konto. Dette gjør du ved å besøke heroku hjemmesiden. Hvor du kan oprette en bruker eller logge inn. Dette finner du øverst i høyre hjørne.
+                Det første du må gjøre når du skal laste nettsiden din til heroku er å opprette en heroku-konto. Dette gjør du ved å besøke heroku hjemmesiden. Hvor du kan opprette en bruker eller logge inn. Dette finner du øverst i høyre hjørne.
             </p>
             <img src="herokuLogin.png" alt="Skjermbilde av hjemmesiden til heroku med pil som peker mot login og signup knappene">
         </div>
         <div class="mainText">
             <h2>Lag en app og installer heroku CLI.</h2>
             <p>
-                Etter du har laget en bruker og har logget inn kan du lage en “app”. Trykk på “create new app, og gi appen et navn. Navnet på appen vil være en del av domenet, så det må være unikt. Navnet må være minst 3 bokstaver, og bare bestå av bokstaver tall og bindestreker, med æ, ø og å som unntak. Velg deretter kontinent og trykk på "create app"
+                Etter du har laget en bruker og har logget inn kan du lage en “app”. Trykk på “create new app, og gi appen et navn. Navnet på appen vil være en del av domenet, så det må være unikt. Navnet må være minst 3 bokstaver, og bare bestå av bokstaver tall og bindestreker, med æ, ø og å som unntak.
             </p>
             <p>
-                Nå som appen er laget må du laste ned heroku CLI. Dette må du gjøre for å kunne styre heroku appen fra terminalen. Trykk på den blå lenken under "Install the Heroku CLI". Lenken tar deg til nedlastingssiden. Om du er på windows bare på “64-bit installer”, dersom du er på macOS skriv følgende i terminalen “$ brew tap heroku/brew && brew install heroku”. Fullfør instalasjonen.
+                Nå som appen er laget må du laste ned heroku CLI. Dette må du gjøre for å kunne styre heroku appen fra terminalen. Trykk på den blå lenken under "Install the Heroku CLI". Lenken tar deg til nedlastingssiden. Om du er på windows bare på “64-bit installer”, dersom du er på macOS skriv følgende i terminalen “$ brew tap heroku/brew && brew install heroku”. Fullfør installasjonen.
             </p>
             <iframe src="lageAppOgInstallereHeroku.mp4" frameborder="0"></iframe>
             <p>
@@ -40,6 +40,34 @@
         </div>
         <div class="mainText">
             <h2>Tilpasse koden din heroku</h2>
+            <p>
+                For at koden din skal fungere på heroku sine servere må du tilpasse porten din, og lage et start script. Start med å installere node pakken dotenv men kommandoen “npm i dotenv”. Når dotenv er installert skal du definere den i toppen av javascript filen din som følgene “const dotenv = require("dotenv").config()”. Til slutt setter du porten til “process.env.PORT”.
+            </p>
+            <p>
+                Nå må du lage start-scriptet. Dette gjør du i package.json filen under “scripts” objektet. inni der skriver du “start”: “kommandoen du kjører for å starte nettsiden”. Et eksempel på kommandoen er: node app.js. 
+            </p>
+            <iframe src="ForrandreKodeHeroku.mp4" frameborder="0"></iframe>
+            <p>
+                Skjermopptak av prosessen på windows
+            </p>
+        </div>
+        <div class="mainText">
+            <h2>Laste opp til heroku</h2>
+            <p>
+                Hvis du har fulgt alle stegene riktig så skal du være helt klar for å laste opp nettsiden din til heroku og tilgjengelig på nettet. Skriv følgende kommandoer i konsollet ditt.
+            </p>
+            <ol>
+                <li>heroku login</li>
+                <li>git init</li>
+                <li>heroku git:remote -a (navnet på appen din)</li>
+                <li>git add .</li>
+                <li>git commit -am ”(valgfri tekst)”</li>
+                <li>git push main</li>
+            </ol>
+            <iframe src="lasteOppTilHeroku.mp4" frameborder="0"></iframe>
+            <p>
+                Skjermopptak av prosessen
+            </p>
         </div>
     </main>
 
