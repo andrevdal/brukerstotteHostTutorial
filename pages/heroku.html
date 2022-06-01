@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="mobile.css">
-    <title>Hjem</title>
+    <title>Heroku</title>
 </head>
 <body>
     <nav>
@@ -19,19 +19,26 @@
         <hr></hr>
         <h1>Hvordan hoste en nettside med heroku?</h1>
         <div class="mainText">
+            <h2>Litt om heroku</h2>
+            <p>
+                Heroku er en skytjeneste hvor man kan laste opp og hoste nettsider. Heroku er i utgangspunktet gratis for småskala bruk. Heroku støtter Java, Node.js, Scala, Clojure, Python, PHP, og Go. I denne veiledningen skal jeg demonstrere prosessen ved hjelp av node.js.
+            </p>
+            <img src="HerokuLogo.png" alt="Heroku logo">
+        </div>
+        <div class="mainText">
             <h2>Lag bruker på heroku</h2>
             <p>
-                Det første du må gjøre når du skal laste nettsiden din til heroku er å opprette en heroku-konto. Dette gjør du ved å besøke heroku hjemmesiden. Hvor du kan opprette en bruker eller logge inn. Dette finner du øverst i høyre hjørne.
+                Det første du må gjøre når du skal laste opp nettsiden din til heroku er å opprette en heroku-konto. Dette gjør du ved å besøke <a href="https://www.heroku.com/">heroku hjemmesiden.</a> Hvor du kan opprette en bruker eller logge inn. Dette finner du øverst i høyre hjørne.
             </p>
             <img src="herokuLogin.png" alt="Skjermbilde av hjemmesiden til heroku med pil som peker mot login og signup knappene">
         </div>
         <div class="mainText">
             <h2>Lag en app og installer heroku CLI.</h2>
             <p>
-                Etter du har laget en bruker og har logget inn kan du lage en “app”. Trykk på “create new app, og gi appen et navn. Navnet på appen vil være en del av domenet, så det må være unikt. Navnet må være minst 3 bokstaver, og bare bestå av bokstaver tall og bindestreker, med æ, ø og å som unntak.
+                Etter du har laget en bruker og har logget inn kan du lage en “app”. Trykk på “create new app", og gi appen et navn. Navnet på appen vil være en del av domenet, så det må være unikt. Navnet må være minst 3 tegn, og kan bare bestå av bokstaver, tall og bindestreker, med æ, ø og å som unntak.
             </p>
             <p>
-                Nå som appen er laget må du laste ned heroku CLI. Dette må du gjøre for å kunne styre heroku appen fra terminalen. Trykk på den blå lenken under "Install the Heroku CLI". Lenken tar deg til nedlastingssiden. Om du er på windows bare på “64-bit installer”, dersom du er på macOS skriv følgende i terminalen “$ brew tap heroku/brew && brew install heroku”. Fullfør installasjonen.
+                Nå som appen er laget må du <a href="https://devcenter.heroku.com/articles/heroku-cli">laste ned heroku CLI.</a> Dette må du gjøre for å kunne styre heroku appen fra terminalen. Trykk på den blå lenken under "Install the Heroku CLI". Lenken tar deg til nedlastingssiden. Om du er på windows kan du bare trykke på “64-bit installer”, dersom du er på macOS skriv følgende i terminalen “$ brew tap heroku/brew && brew install heroku”. Fullfør deretter installasjonen.
             </p>
             <iframe src="lageAppOgInstallereHeroku.mp4" frameborder="0"></iframe>
             <p>
@@ -41,14 +48,14 @@
         <div class="mainText">
             <h2>Tilpasse koden din heroku</h2>
             <p>
-                For at koden din skal fungere på heroku sine servere må du tilpasse porten din, og lage et start script. Start med å installere node pakken dotenv men kommandoen “npm i dotenv”. Når dotenv er installert skal du definere den i toppen av javascript filen din som følgene “const dotenv = require("dotenv").config()”. Til slutt setter du porten til “process.env.PORT”.
+                For at koden din skal fungere på heroku sine servere må du tilpasse porten din, og lage et start script. Start med å installere node modulen dotenv med kommandoen “npm i dotenv”. Når dotenv er installert skal du definere den i toppen av javascript filen din som følgene “const dotenv = require("dotenv").config()”. Til slutt setter du porten til “process.env.PORT”.
             </p>
             <p>
-                Nå må du lage start-scriptet. Dette gjør du i package.json filen under “scripts” objektet. inni der skriver du “start”: “kommandoen du kjører for å starte nettsiden”. Et eksempel på kommandoen er: node app.js. 
+                Nå må du lage start-scriptet. Dette gjør du i "package.json" filen. I objektet under “scripts” skriver du “start”: “(kommandoen du kjører for å starte nettsiden)”. Et eksempel på start-script er: node app.js. 
             </p>
             <iframe src="ForrandreKodeHeroku.mp4" frameborder="0"></iframe>
             <p>
-                Skjermopptak av prosessen på windows
+                Skjermopptak av prosessen på node.js
             </p>
         </div>
         <div class="mainText">
