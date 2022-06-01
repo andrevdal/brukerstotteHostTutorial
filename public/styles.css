@@ -62,6 +62,13 @@ main h1 {
   text-align: center;
   margin-bottom: 2%;
 }
+table{
+  width: 80%;
+  margin-top: 3%;
+}
+td{
+  text-align: center;
+}
 .mainText{
   width: 50%;
   margin: auto;
@@ -77,6 +84,9 @@ main h1 {
 }
 .mainText a{
   color: blue;
+}
+.icon{
+  width: 30%;
 }
 
 /*FOOTER*/
