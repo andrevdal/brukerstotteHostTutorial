@@ -31,6 +31,9 @@ nav a:hover {
 main{
   flex: 1 0 auto;
 }
+p{
+  font-size: 115%;
+}
 iframe{
   height: 400px;
 }
@@ -66,8 +69,9 @@ table{
   width: 80%;
   margin-top: 3%;
 }
-td{
-  text-align: center;
+th{
+  font-size: 150%;
+  text-align: left;
 }
 .mainText{
   width: 50%;
